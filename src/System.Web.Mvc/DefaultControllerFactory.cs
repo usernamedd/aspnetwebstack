@@ -25,8 +25,9 @@ namespace System.Web.Mvc
         private ControllerBuilder _controllerBuilder;
         private ControllerTypeCache _instanceControllerTypeCache;
 
+        #region DefaultControllerFactory构造
         public DefaultControllerFactory()
-            : this(null, null, null)
+    : this(null, null, null)
         {
         }
 
@@ -48,7 +49,8 @@ namespace System.Web.Mvc
                                                               new DefaultControllerActivator(dependencyResolver),
                                                               "DefaultControllerFactory constructor");
             }
-        }
+        } 
+        #endregion
 
         private IControllerActivator ControllerActivator
         {
